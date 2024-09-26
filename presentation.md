@@ -60,12 +60,30 @@ Foi realizada a leitura dos dados do IBGE, que vieram no formato inicial `.csv`,
 
 ## Definição das métricas
 
-- A princípio, através do dicionário de dados do SIM definimos as métricas 
+- A princípio, através do dicionário de dados do SIM definiu-se as métricas, que correspondem aos dados de identificação das vítimas (escolaridade, idade, sexo, raça/cor, ocupação), e dados gerais (ano, homicídos e população).
 
 ## Análise descritiva geral
 
+### Calculando taxa de homicídio
+
+- Previamente, foi calculado a quantidade de homicídios por ano, entre 2010 a 2022.
+
+- Para calcular a taxa de homicídio, dividiu-se a quantidade total de homicídios ocorridos no devido ano, pela população total, e multiplicou-se por 100mil, assim, resultando numa taxa de homicídio a cada 100mil habitantes.
+
+**Colocar fórmula**
+
+- Comparou-se o resultado com os dados do IPEA (Instituto de Pesquisa Econômica Aplicada) e confirmou-se sua precisão.
+
+### Analisando vítimas de baixa escolaridade
+
+- De acordo com a Lei de Diretrizes e Bases da Educação Nacional, a educação básica é composta pelo ensino fundamental e ensino médio.
+
+- Assim, filtrou-se as vítimas maiores de 18 anos que não chegaram a completar o ensino médio.
+
 ## Análise segmentada por identificação
 
-Como as métricas foram definidas?
+- Após o filtro por baixa escolaridade, foi analisado cada fator de identifacação das vítimas: idade, raça/cor, sexo e ocupação.
 
-Como os dados foram analisados?
+## Análise perfil mais comum 
+
+- Criou-se um funil, que começa na baixa escolaridade e termina na ocupação, a fim de encontrar um perfil detalhado mais comum entre as vítimas de homicídio com baixa escolaridade.
