@@ -160,9 +160,9 @@ Verificamos uma quantidade de pessoas na faixa de 18-35 anos com elevada mortali
 
 ## Análise segmentada por idade {auto-animate="true"}
 
-Em média, 19.59% das pessoas de cada faixa etária que morrem tem baixa escolaridade em relação ao total de pessoas.
+Em média, 19.59% das pessoas de cada faixa etária que morrem tem baixa escolaridade em relação ao total de homicídios.
 
-Conclusivamente, verifica-se que não existe uma idade que influencia na mortalidade a partir da baixa escolaridade. Nesse caso, a taxa de homicídio por baixa escolaridade por idade se mantém praticamente constante com um desvio-padrão de 0,025 (pouca dispersão) em relação ao total de pessoas.
+Conclusivamente, verifica-se que não existem evidências para uma idade que influencia na mortalidade a partir da baixa escolaridade. Nesse caso, a taxa de homicídio por baixa escolaridade por idade se mantém praticamente constante com um desvio-padrão de 0,025 (pouca dispersão) em relação ao total de homicídios.
 
 ## Análise segmentada por raça {auto-animate="true"}
 
@@ -194,13 +194,13 @@ Principais ocupações das vítimas com baixa escolaridade, de acordo com a Clas
 
 ```{python echo=FALSE}
 import pandas as pd
-ocup = pd.DataFrame({'Ocupação' : ['Desempregado ou trabalhador informal', 'Trabalhador rural', 'Servente de Obras', 'Caseiro', 'Pedreiro']}, index=['1º', '2º', '3º', '4º', '5º'])
+ocup = pd.DataFrame({'Ocupação' : ['Trabalhador terciário ou autônomo', 'Trabalhador rural', 'Servente de Obras', 'Caseiro', 'Pedreiro']}, index=['1º', '2º', '3º', '4º', '5º'])
 display(ocup)
 ```
 
 ## Análise segmentada por ocupação {auto-animate="true"}
 
-Quem tem baixa escolaridade, normalmente trabalha no rural ou é autônomo. Além disso essas pessoas têm menos oportunidades de carreira.
+Percebeu-se que, quem tem baixa escolaridade, normalmente trabalha no rural ou é autônomo. Além disso, observou-se que as pessoas com baixa escolaridade têm menos oportunidades de carreira.
 
 Juntando as 5 ocupações, elas representam cerca de 59,32% dos homicídios por baixa escolaridade na Paraíba.
 
@@ -218,7 +218,7 @@ Juntando as 5 ocupações, elas representam cerca de 59,32% dos homicídios por 
 
 ## Análise do perfil mais comum {auto-animate="true"}
 
-Sintetizando, a maior parte das vítimas possui até o Ensino Fundamental 1, na faixa etária de 25 a 35 anos, são homens pardos, que trabalham na área rural
+Sintetizando, a maior parte das vítimas que possuem até o Ensino Fundamental 1, estão na faixa etária de 25 a 35 anos, e são homens pardos que trabalham na área rural.
 
 ```{python echo=FALSE}
 import pandas as pd
