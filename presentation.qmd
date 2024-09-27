@@ -228,7 +228,9 @@ Analisando o período de 2016-2019, verificamos que a taxa de homicídio total t
 
 # Conclusão
 
+Após diversas análises, percebeu-se que as principais vítimas de homicídio são aquelas que possuem algum tipo de vulnerabilidade social, que reflete vulnerabilidades econômicas. 
 
+Assim, evidencia-se a relação entre os fatores sociais analisados, com as taxas de homicídio no estado da Paraíba.
 
 ## Limitações
 
