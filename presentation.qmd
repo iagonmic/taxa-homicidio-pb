@@ -1,6 +1,8 @@
 ---
 title: "Análise Descritiva Temporal das Taxas de Homicídio no Estado da Paraíba"
 bibliography: references.bib
+nocite: |
+  @Anuario2023, @Taylor2021, @Wanzinack2018, @Peres2011
 author:
     - Iago Flávio
     - Alex Cordeiro
@@ -76,14 +78,17 @@ Foi realizada a leitura dos dados do IBGE, que vieram no formato inicial `.csv`,
 
 A princípio, através do dicionário de dados do SIM, definiu-se as métricas que correspondem aos dados de identificação das vítimas (escolaridade, idade, sexo, raça/cor, ocupação), e dados gerais (ano, homicídos e população).
 
-## Definição das métricas {auto-animate="true"}
+## Definição das métricas {auto-animate="true" .smaller}
 
 ```{python echo=FALSE}
 import pandas as pd
 
 metricas = pd.DataFrame({'Métricas Analisadas': ['ANO', 'HOMICÍDIOS', 'POPULAÇÃO', 
                                                  'IDADE', 'SEXO', 'RAÇA', 'OCUPAÇÃO',
-                                                 'ESCOLARIDADE']})
+                                                 'ESCOLARIDADE'],
+                        'Descrição': ['Período de tempo em anos', 'Quantidade de homicídios', 'Estimativa populacional', 'Idade das vítimas em anos',
+                                      'Sexo das vítimas', 'Raça/cor das vítimas', 'Tipo de trabalho que o falecido desenvolveu',
+                                      'Último nível de escolaridade do falecido']})
 display(metricas)
 ```
 
@@ -147,7 +152,7 @@ Isso mostra que a taxa de homicídio para pessoas com baixa escolaridade tende a
 
 ## Análise segmentada por idade {auto-animate="true"}
 
-Verificamos uma quantidade de pessoas na faixa de 18-35 anos com elevada mortalidade.
+Verificamos uma quantidade de pessoas na faixa de 18-35 anos com elevada mortalidade, onde essa faixa representa aproximadamente 67,96% dos casos.
 
 ## Análise segmentada por idade {auto-animate="true"}
 
@@ -157,7 +162,7 @@ Verificamos uma quantidade de pessoas na faixa de 18-35 anos com elevada mortali
 
 Em média, 19.59% das pessoas de cada faixa etária que morrem tem baixa escolaridade em relação ao total de pessoas.
 
-Não tem uma idade que influencia a mortalidade a partir da baixa escolaridade, mantendo-a praticamente constante com um desvio-padrão de 0,025 (pouca dispersão) em relação ao total de pessoas.
+Conclusivamente, verifica-se que não existe uma idade que influencia na mortalidade a partir da baixa escolaridade. Nesse caso, a taxa de homicídio por baixa escolaridade por idade se mantém praticamente constante com um desvio-padrão de 0,025 (pouca dispersão) em relação ao total de pessoas.
 
 ## Análise segmentada por raça {auto-animate="true"}
 
@@ -177,12 +182,11 @@ Nesse caso é observado uma predominância da raça parda em relação à taxa d
 
 ```{python echo=FALSE}
 import pandas as pd
-sexo = pd.DataFrame({'Taxa': ['92,56%', '7,44%']}, index=['Masculino', 'Feminino'])
+sexo = pd.DataFrame({'Taxa': ['93,06%', '6,94%']}, index=['Masculino', 'Feminino'])
 display(sexo)
 ```
 
-- 92,56% dos casos de baixa escolaridade são homens
-- 7,44% dos casos de baixa escolaridade são mulheres
+Em relação ao sexo, verifica-se uma predominância maior em relação ao sexo masculino no que se refere à taxa de homicídio por baixa escolaridade.
 
 ## Análise segmentada por ocupação {auto-animate="true"}
 
@@ -194,19 +198,23 @@ ocup = pd.DataFrame({'Ocupação' : ['Desempregado ou trabalhador informal', 'Tr
 display(ocup)
 ```
 
-Quem tem baixa escolaridade, normalmente trabalha no rural ou é autônomo. Além disso tem menos oportunidades de carreira.
+## Análise segmentada por ocupação {auto-animate="true"}
+
+Quem tem baixa escolaridade, normalmente trabalha no rural ou é autônomo. Além disso essas pessoas têm menos oportunidades de carreira.
+
+Juntando as 5 ocupações, elas representam cerca de 59,32% dos homicídios por baixa escolaridade na Paraíba.
 
 ## Análise do perfil mais comum {auto-animate="true"}
 
-- 21.20% das vítimas possuiam apenas o Ensino Fundamental 1.
+- Do total das vítimas, 21,20% dessas possuiam apenas o Ensino Fundamental 1.
 
-- Dessas, 34,69% possuiam entre 25 e 35 anos de idade.
+- Das quais 34,69% possuiam entre 25 e 35 anos de idade.
 
-- 90.24% dessas vítimas eram pardas.
+- 90,24% dessas vítimas eram pardas.
 
-- 94.12% eram homens.
+- 94,12% eram homens.
 
-- 11.39% se enquadra no código 622020 da Classificação Brasileira de Ocupações, trabalhador volante da agricultura.
+- 11,39% se enquadra no código 622020 da Classificação Brasileira de Ocupações, trabalhador volante da agricultura.
 
 ## Análise do perfil mais comum {auto-animate="true"}
 
@@ -224,32 +232,61 @@ display(perfil)
 
 ## Análise do perfil mais comum {auto-animate="true"}
 
-Analisando o período de 2016-2019, verificamos que a taxa de homicídio total teve uma queda, enquanto que as taxas de homicídio (baixa escolaridade) e homicídio (perfil mais comum) se mantiveram praticamente constantes. Verificamos isso através do desvio-padrão, onde nesse período selecionado de 2016 a 2019, a taxa total teve um desvio-padrão de 5,399, enquanto que a de baixa escolaridade teve um desvio-padrão de 0,552 e a do perfil mais comum teve 0,048, ou seja, uma diferença de aproximadamente 100x na variação desse período. Isso mostra que, mesmo variando bastante a taxa de homicídio ao longo dos anos, o perfil mais comum permaneceu com uma taxa de homicídio praticamente constante.
+Analisando o período de 2016-2019, verificou-se que a taxa de homicídio total teve uma queda, enquanto que as taxas de homicídio (baixa escolaridade) e homicídio (perfil mais comum) se mantiveram praticamente constantes. 
 
-# Conclusão
+## Análise do perfil mais comum {auto-animate="true"}
 
-Após diversas análises, percebeu-se que as principais vítimas de homicídio são aquelas que possuem algum tipo de vulnerabilidade social, que reflete vulnerabilidades econômicas. 
+Verificou-se isso através do desvio-padrão, onde nesse período selecionado de 2016 a 2019, a taxa total teve um desvio-padrão de 5,399, enquanto que a de baixa escolaridade teve um desvio-padrão de 0,552 e a do perfil mais comum teve 0,048.
 
-Assim, evidencia-se a relação entre os fatores sociais analisados, com as taxas de homicídio no estado da Paraíba.
+## Análise do perfil mais comum {auto-animate="true"}
 
-## Limitações
+$$ 
+\frac{5,399 (\text{desvio-padrão total})}{0,048 (\text{desvio-padrão perfil})}=112,5
+$$
 
-- Dados faltantes ou ignorados
+Dado isso, observa-se uma diferença de aproximadamente 112,5 vezes na dispersão dos dados nesse período. Isso mostra que, mesmo variando bastante a taxa de homicídio ao longo dos anos, o perfil mais comum permaneceu com uma taxa de homicídio praticamente constante.
 
-- Sem dados de escolaridade dos anos de 2010 e 2011
+# Conclusão {auto-animate="true"}
 
-## Sugestões
+Após diversas análises, verificou-se que fatores como idade, raça, sexo e ocupação evidenciam influência na aumento da taxa de homicídio por baixa escolaridade na Paraíba.
 
-- Junção dos dados do SIM com os dados de mortalidade da Secretaria Estadual de Segurança Pública e Defesa Social.
+Dentre esses fatores, a idade predominante em relação a taxa de homicídio por baixa escolaridade é de 18-35 anos, que corresponde a aproximadamente 67,96% dos casos. 
+
+A raça com maior número de casos é a raça parda, com aproximadamente 90% em relação ao total de homicídios com baixa escolaridade.
+
+# Conclusão {auto-animate="true"}
+
+O sexo mais evidente é o masculino, com 93,06% dos casos totais com baixa escolaridade. 
+
+As principais ocupações são a de trabalhador terciário/autônomo e a de trabalhador rural, representando 37,52% dos casos com baixa escolaridade. Juntando as 5 ocupações mais frequentes, elas representam cerca de 59,32% dos homicídios por baixa escolaridade na Paraíba.
+
+# Conclusão {auto-animate="true"}
+
+Dessa maneira, é preenchida a lacuna dos estudos que abordam a taxa de homicídio na Paraíba e sua relação com a baixa escolaridade, assim como os fatores que evidenciam influências nessa taxa.
+
+Além disso, observa-se evidências de que a escolaridade é inversamente proporcional a taxa de homicídio na Paraíba, o que pode indicar que ao melhorar a educação, as taxas de homicídio poderiam diminuir.
+
+## Limitações {auto-animate="true"}
+
+Ao realizar a análise primária dos dados de homicídios, percebeu-se que 74,72% dos dados de escolaridade ou estavam faltando ou foram ignorados. Isso implicou em uma análise com um volume menor de dados, o que tornou o processo de análise mais restrito.
+
+## Limitações {auto-animate="true"}
+
+Percebeu-se que não foram catalogados dados dos anos de 2010 a 2011 para pessoas com baixa escolaridade (que tem até o fundamental II) no SIM.
+
+## Limitações {auto-animate="true"}
+
+Houve uma pequena diferença entre os dados disponíveis para o público através do IPEA e os dados coletados para análise através do SIM e do IBGE, pois não conseguiu-se o acesso dos dados restantes de homicídios na Paraíba pela Secretaria Estadual de Segurança Pública e Defesa Social devido a inacessibilidade dos dados.
+
+## Sugestões {auto-animate="true"}
+
+Sugerimos através desse estudo, em prol da facilitação da obtenção de dados para estudos posteriores, a junção dos dados do SIM com os dados de mortalidade da Secretaria Estadual de Segurança Pública e Defesa Social.
+
+## Sugestões {auto-animate="true"}
+
+Com esses achados, cabe ao governo do estado da Paraíba tomarem decisões estratégicas a fim de aprimorar as políticas públicas que tratam do o acesso à educação no estado para toda a população, almejando em uma possível redução da taxa de homicídio geral na Paraíba.
 
 # Referências
 
 ::: {#refs}
----
-nocite: |
-  @Anuario2023, @Taylor2021, @Wanzinack2018, @Peres2011
----
-@Anuario2023
-@Taylor2021
-@Wanzinack2018
-@Peres2011
+:::
