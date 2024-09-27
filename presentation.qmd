@@ -232,14 +232,20 @@ Analisando o período de 2016-2019, verificamos que a taxa de homicídio total t
 
 ## Limitações
 
+- Dados faltantes ou ignorados
+
+- Sem dados de escolaridade dos anos de 2010 e 2011
+
 ## Sugestões
 
-### Referências
+- Junção dos dados do SIM com os dados de mortalidade da Secretaria Estadual de Segurança Pública e Defesa Social.
+
+# Referências
 
 ::: {#refs}
 ---
 nocite: |
-  @*
+  @Anuario2023, @Taylor2021, @Wanzinack2018, @Peres2011
 ---
 @Anuario2023
 @Taylor2021
