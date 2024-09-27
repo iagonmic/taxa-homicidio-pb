@@ -1,5 +1,6 @@
 ---
 title: "Análise Descritiva Temporal das Taxas de Homicídio no Estado da Paraíba"
+bibliography: references.bib
 author:
     - Iago Flávio
     - Alex Cordeiro
@@ -174,12 +175,73 @@ Nesse caso é observado uma predominância da raça parda em relação à taxa d
 
 ## Análise segmentada por sexo {auto-animate="true"}
 
+```{python echo=FALSE}
+import pandas as pd
+sexo = pd.DataFrame({'Taxa': ['92,56%', '7,44%']}, index=['Masculino', 'Feminino'])
+display(sexo)
+```
+
+- 92,56% dos casos de baixa escolaridade são homens
+- 7,44% dos casos de baixa escolaridade são mulheres
+
 ## Análise segmentada por ocupação {auto-animate="true"}
+
+Principais ocupações das vítimas com baixa escolaridade, de acordo com a Classificação Brasileira de Ocupações.
+
+```{python echo=FALSE}
+import pandas as pd
+ocup = pd.DataFrame({'Ocupação' : ['Desempregado ou trabalhador informal', 'Trabalhador rural', 'Servente de Obras', 'Caseiro', 'Pedreiro']}, index=['1º', '2º', '3º', '4º', '5º'])
+display(ocup)
+```
+
+Quem tem baixa escolaridade, normalmente trabalha no rural ou é autônomo. Além disso tem menos oportunidades de carreira.
 
 ## Análise do perfil mais comum {auto-animate="true"}
 
+- 21.20% das vítimas possuiam apenas o Ensino Fundamental 1.
+
+- Dessas, 34,69% possuiam entre 25 e 35 anos de idade.
+
+- 90.24% dessas vítimas eram pardas.
+
+- 94.12% eram homens.
+
+- 11.39% se enquadra no código 622020 da Classificação Brasileira de Ocupações, trabalhador volante da agricultura.
+
+## Análise do perfil mais comum {auto-animate="true"}
+
+Sintetizando, a maior parte das vítimas possui até o Ensino Fundamental 1, na faixa etária de 25 a 35 anos, são homens pardos, que trabalham na área rural
+
+```{python echo=FALSE}
+import pandas as pd
+perfil = pd.DataFrame({'Perfil':['Fundamental I', 'Entre 25 a 35 anos', 'Pardos', 'Homens', 'Trabalhadores rurais']}, index=['Educação', 'Idade', 'Raça/Cor', 'Sexo', 'Ocupação'])
+display(perfil)
+```
+
+## Análise do perfil mais comum {auto-animate="true"}
+
+![](graphs/comparacao_perfil.png)
+
+## Análise do perfil mais comum {auto-animate="true"}
+
+Analisando o período de 2016-2019, verificamos que a taxa de homicídio total teve uma queda, enquanto que as taxas de homicídio (baixa escolaridade) e homicídio (perfil mais comum) se mantiveram praticamente constantes. Verificamos isso através do desvio-padrão, onde nesse período selecionado de 2016 a 2019, a taxa total teve um desvio-padrão de 5,399, enquanto que a de baixa escolaridade teve um desvio-padrão de 0,552 e a do perfil mais comum teve 0,048, ou seja, uma diferença de aproximadamente 100x na variação desse período. Isso mostra que, mesmo variando bastante a taxa de homicídio ao longo dos anos, o perfil mais comum permaneceu com uma taxa de homicídio praticamente constante.
+
 # Conclusão
+
+
 
 ## Limitações
 
 ## Sugestões
+
+### Referências
+
+::: {#refs}
+---
+nocite: |
+  @*
+---
+@Anuario2023
+@Taylor2021
+@Wanzinack2018
+@Peres2011
