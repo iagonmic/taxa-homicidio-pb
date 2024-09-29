@@ -26,11 +26,17 @@ format:
 
 - **Taxa de MVI no Nordeste em 2023: 36,9** (a cada 100 mil habitantes)
 
-## Homicídio e Educação
+## Homicídio e Educação {auto-animate="true"}
 
-- Com a revisão da literatura, encontrou-se evidências de que a educação é um fator de proteção contra o homicídio. (Gleditsch; Rivera; Zárate-tenorio, 2021)
+Com a revisão da literatura, encontrou-se evidências de que a educação é um fator de proteção contra o homicídio. (Gleditsch; Rivera; Zárate-tenorio, 2021)
 
-- Entretanto, verificou-se que não há estudos que evidenciem essa correlação na região Nordeste, mais especificamente no estado da Paraíba.
+Entretanto, verificou-se que não há estudos que evidenciem essa correlação na região Nordeste, mais especificamente no estado da Paraíba.
+
+Entre 2010 e 2022, o Brasil vivenciou mudanças significativas tanto nas políticas de segurança pública quanto nas políticas educacionais, com destaque para programas voltados à redução das desigualdades educacionais.
+
+## Homicídio e Educação {auto-animate="true"}
+
+Esse estudo é fundamental para entender as dinâmicas sociais e econômicas subjacentes à violência na região. Além disso, tal análise pode fornecer subsídios valiosos para a formulação de políticas públicas integradas, que priorizem o fortalecimento do sistema educacional como uma estratégia para a prevenção e redução do homicídio.
 
 ## Objetivos
 
@@ -285,6 +291,38 @@ Sugerimos através desse estudo, em prol da facilitação da obtenção de dados
 ## Sugestões {auto-animate="true"}
 
 Com esses achados, cabe ao governo do estado da Paraíba tomar decisões estratégicas a fim de aprimorar as políticas públicas que tratam do o acesso à educação no estado para toda a população, almejando em uma possível redução da taxa de homicídio geral na Paraíba.
+
+## Sugestões {auto-animate="true"}
+
+**Programas de Educação Integral**:
+
+Implementação de escolas de tempo integral, em comunidades de baixa renda, oferecendo atividades extracurriculares como esportes, artes e cursos profissionalizantes.
+
+Objetivo: Manter os jovens em atividades educativas durante o dia inteiro, diminuindo o tempo ocioso que pode levar à exposição à criminalidade.
+
+## Sugestões {auto-animate="true"}
+
+**Programas de Educação de Jovens e Adultos (EJA)**:
+
+Ampliação e fortalecimento dos programas de Educação de Jovens e Adultos (EJA), oferecendo cursos supletivos presenciais e à distância para adultos que não concluíram o ensino fundamental ou médio.
+
+Objetivo: Proporcionar a esses adultos a oportunidade de completar a escolaridade básica, aumentando suas chances de ingresso no mercado de trabalho formal e reduzindo sua vulnerabilidade social.
+
+## Sugestões {auto-animate="true"}
+
+**Cursos Profissionalizantes Gratuitos**:
+
+Criação de programas de capacitação técnica e profissional voltados para adultos de baixa escolaridade, com cursos em áreas com alta demanda de emprego, como construção civil, eletricidade, culinária, serviços gerais e tecnologia.
+
+Objetivo: Oferecer qualificação para que adultos com baixa escolaridade possam se inserir no mercado de trabalho ou se tornar empreendedores, diminuindo a dependência de atividades ilegais.
+
+## Sugestões {auto-animate="true"}
+
+**Apoio Psicossocial e Familiar**:
+
+Criação programas de apoio psicossocial e familiar para pessoas em situação de vulnerabilidade, integrados às iniciativas de educação e capacitação. Psicólogos, assistentes sociais e profissionais de saúde podem auxiliar nesse processo.
+
+Objetivo: Tratar fatores que possam levar à violência e à criminalidade, como traumas, abuso de substâncias e problemas familiares, criando um ambiente mais favorável à educação e ao trabalho.
 
 # Referências
 
