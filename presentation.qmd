@@ -52,11 +52,17 @@ Objetiva-se por meio desse estudo, realizar uma análise descritiva dos dados so
 
 - Além disso, foram utilizadas estimativas populacionais do IBGE (Instituto Brasileiro de Geografia e Estatística) para calcular a taxa de homicídio.
 
-## Período temporal e região
+## Período temporal e região {auto-animate="true"}
 
-- Foram coletados os dados do período de 2010 a 2022, do estado da Paraíba, visto que existe uma carência de estudos voltados a evolução das taxas de homicídio correlacionados a educação, nessa região.
+A região adotada foi o Nordeste, justificada por ser a região com pior índice de pobreza do Brasil, e mais especificamente o estado da Paraíba, devido ao estado apresentar altas taxas de pobreza em relação ao Brasil (2022 - 52,7%, 2023 - 47,5%; PNAD-C, IBGE), tornando-a uma das mais interessantes para aplicar o estudo.
 
-- Além disso, de acordo com os dados do Instituto de Pesquisa Econômica Aplicada (IPEA), houve uma queda nas taxas de homicídio na Paraíba, após o ano de 2010, justificando a escolha do período abordado.
+Ademais, percebe-se que mesmo com a queda na taxa de homicídio (IPEA), é aparente a carência das necessidades básicas no estado.
+
+## Período temporal e região {auto-animate="true"}
+
+Foram coletados os dados do período de 2010 a 2022, do estado da Paraíba, visto que existe uma carência de estudos voltados a evolução das taxas de homicídio correlacionados a educação, nessa região.
+
+Além disso, de acordo com os dados do Instituto de Pesquisa Econômica Aplicada (IPEA), houve uma queda nas taxas de homicídio na Paraíba, após o ano de 2010, justificando a escolha do período abordado.
 
 ## Extração e tratamento dos dados do SIM {auto-animate="true"}
 
