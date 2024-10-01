@@ -80,11 +80,11 @@ Foi realizada a leitura dos dados do IBGE, que vieram no formato inicial `.csv`,
 
 ## Tratamento dos dados
 
-- Realizou-se a verificação da tipagem dos dados e a conversão dos mesmos para utilização na análise.
+Realizou-se a verificação da tipagem dos dados e a conversão dos mesmos para utilização na análise.
 
-- Foi observado que aproximadamente 74% dos dados ou estavam vazios ou a escolaridade foi ignorada. A fim de alcançar o objetivo do estudo, foi realizada a remoção dos dados faltantes ou ignorados para a realização do trabalho, facilitando o processo de análise descritiva.
+Foi observado que aproximadamente 74% dos dados ou estavam vazios ou a escolaridade foi ignorada. A fim de alcançar o objetivo do estudo, foi realizada a remoção dos dados faltantes ou ignorados para a realização do trabalho, facilitando o processo de análise descritiva.
 
-- Após a extração e tratamento dos dados do banco de dados do IBGE e do SIM, houve a junção desses dados em um único `DataFrame`, com a finalidade de definir-se as métricas para análise descritiva.
+Após a extração e tratamento dos dados do banco de dados do IBGE e do SIM, houve a junção desses dados em um único `DataFrame`, com a finalidade de definir-se as métricas para análise descritiva.
 
 ## Definição das métricas {auto-animate="true"}
 
