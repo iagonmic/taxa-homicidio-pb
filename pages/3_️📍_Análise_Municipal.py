@@ -182,7 +182,8 @@ def df_transformed(path, fill=True):
     df = (
         pd.read_csv(
             path, 
-            index_col='Unnamed: 0'
+            index_col='Unnamed: 0',
+            dtype={'COD_MUN': str}
         )
         .reset_index()
         .drop('index', axis=1)
