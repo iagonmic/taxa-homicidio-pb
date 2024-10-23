@@ -12,7 +12,7 @@ def main():
 
     st.title('Análise anual das taxas de homicídio na Paraíba')
     
-    col1, col2 = st.columns(2)
+    col1, colspace, col2 = st.columns([1, 0.2, 1])
     
     file = pd.read_csv('csv_visualizacao/pb_taxa_homicidios.csv', sep=',', encoding='utf-8')
     df = pd.DataFrame(file)
@@ -21,6 +21,14 @@ def main():
     df_br = pd.DataFrame(filebr)
     
     with col1:
+        with st.expander('Gráfico de linhas', False):
+            st.markdown("""
+                        No gráfico de linhas, você poderá visualizar as taxas de homicídio
+                        no estado da Paraíba, entre os anos de 2010 a 2022. Com o slider abaixo,
+                        você também pode escolher um período de tempo específico para visualização.
+                        As métricas que aparecem acima do gráfico são a taxa mínima e máxima alcançada
+                        naquele período de tempo, assim como a média de todas as taxas.""")
+            
         min_year = min(df['ANO'])
         max_year = max(df['ANO'])
         anos = st.slider(
@@ -46,10 +54,35 @@ def main():
             st.metric(label="Média das taxas", value=f"{media_hom:.3f}")
         
         fig = px.line(df_anos, x="ANO", y="TAXA", title="Taxa de Homicídio ao longo dos anos")
+        
         fig.update_xaxes(type='category')
+        
+        fig.update_layout(
+            xaxis_title='Ano',  
+            yaxis_title='Taxa de homicídio (a cada 100mil habitantes)'   
+        )
+        
+        fig.update_traces(
+            hoverlabel=dict(
+                bgcolor='lightblue',  
+                font_size=16,         
+                font_color='black',   
+                bordercolor='light blue'    
+            ),
+            hovertemplate='<b>Ano: %{x}</b><br>Taxa de homicídio: %{y}<extra></extra>' 
+        )
+        
         st.plotly_chart(fig, use_container_width=True)
     
     with col2:
+        with st.expander('Comparação Brasil vs Paraíba', False):
+            st.markdown("""
+                        Abaixo, você poderá escolher um ano entre 2010 a 2022 para comparação
+                        das taxas de homicídio do Brasil e da Paraíba. O termômetro
+                        indicará como a taxa de homicídio da Paraíba se encontra em relação
+                        a do Brasil, se está acima ou abaixo e se é positivo ou negativo.
+                        """)
+            
         lista_anos = df['ANO'].unique()
         option = st.selectbox('Selecione um ano',
                               lista_anos,
@@ -57,6 +90,7 @@ def main():
                               disabled=st.session_state.disabled, )
 
         col21, col22 = st.columns(2)
+        
         with col21:
             taxabr = df_br.query(f'período == {option}')
             taxabr = taxabr['valor'].iloc[0]
@@ -64,7 +98,7 @@ def main():
         with col22:
             taxapb = df.query(f'ANO == {option}')
             taxapb = taxapb['TAXA'].iloc[0]
-            st.metric(label=f'Taxa homicídio Paríba no ano {option}', value=taxapb)
+            st.metric(label=f'Taxa homicídio Paraíba no ano {option}', value=round(taxapb, 1))
         
         escala_min = 0
         escala_max = taxabr*2
@@ -77,14 +111,14 @@ def main():
             delta={'reference': taxabr, 'position': "top", 'increasing': {'color': cor_delta}},  
             gauge={
                 'axis': {'range': [escala_min, escala_max]}, 
-                'bar': {'color': "black"},  
+                'bar': {'color': "white"},  
                 'steps': [
-                    {'range': [escala_min, 0.5 * taxabr], 'color': "green"},  # Faixa abaixo do neutro
-                    {'range': [0.5 * taxabr, taxabr], 'color': "yellow"},  # Faixa neutra
+                    {'range': [escala_min, 0.5 * taxabr], 'color': "yellow"},  # Faixa abaixo do neutro
+                    {'range': [0.5 * taxabr, taxabr], 'color': "orange"},  # Faixa neutra
                     {'range': [taxabr, escala_max], 'color': "red"}  # Faixa acima do neutro
                 ],
             },
-            title={'text': "Comparação com Valor Neutro"}  
+            title={'text': "Comparação com Taxa do Brasil"}  
         ))
         
         st.plotly_chart(fig)
