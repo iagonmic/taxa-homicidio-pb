@@ -116,7 +116,7 @@ def main():
 
 
 def get_transformed_json(): # transformação do id dentro do json
-    with open('data/paraiba.json', 'r') as file:
+    with open('data/paraiba.json', 'r', encoding='utf-8') as file:
         state = json.load(file)
         
         for i in range(len(state['features'])):
@@ -181,7 +181,7 @@ def df_transformed(path, fill=True):
 
     df = (
         pd.read_csv(
-            path,
+            path, 
             index_col='Unnamed: 0'
         )
         .reset_index()
