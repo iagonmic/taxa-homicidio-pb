@@ -9,10 +9,8 @@ def main():
     if "visibility" not in st.session_state:
         st.session_state.visibility = "visible"
         st.session_state.disabled = False
-
-    st.title('Análise anual das taxas de homicídio na Paraíba')
     
-    col1, colspace, col2 = st.columns([1, 0.2, 1])
+    col1, col2 = st.columns(2, gap='large')
     
     file = pd.read_csv('csv_visualizacao/pb_taxa_homicidios.csv', sep=',', encoding='utf-8')
     df = pd.DataFrame(file)
@@ -63,11 +61,12 @@ def main():
         )
         
         fig.update_traces(
+            line=dict(color='lightyellow', width=5),
             hoverlabel=dict(
-                bgcolor='lightblue',  
+                bgcolor='lightyellow',  
                 font_size=16,         
                 font_color='black',   
-                bordercolor='light blue'    
+                bordercolor='lightyellow'    
             ),
             hovertemplate='<b>Ano: %{x}</b><br>Taxa de homicídio: %{y}<extra></extra>' 
         )
