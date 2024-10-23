@@ -70,8 +70,10 @@ def main():
             ),
             hovertemplate='<b>Ano: %{x}</b><br>Taxa de homicídio: %{y}<extra></extra>' 
         )
+
         
         st.plotly_chart(fig, use_container_width=True)
+        st.write('Fonte: Elaboraçao própria')
     
     with col2:
         with st.expander('Comparação Brasil vs Paraíba', False):
@@ -121,5 +123,6 @@ def main():
         ))
         
         st.plotly_chart(fig)
+        st.write('Fonte: Elaboraçao própria')
 if __name__ == '__main__':
     main()
