@@ -38,7 +38,7 @@ def main():
 
         with open('presentation.pdf', 'rb') as f:
             pdf_data = f.read()
-        st.download_button(label='Baixar PDF', data='pdf_data.pdf', file_name='projeto_taxa_hom_pb.pdf', mime='application/pdf',type='primary')
+            st.download_button(label='Baixar PDF', data=pdf_data, file_name='projeto_taxa_hom_pb.pdf', mime='application/pdf',type='primary')
 
 
 if __name__ == '__main__':
