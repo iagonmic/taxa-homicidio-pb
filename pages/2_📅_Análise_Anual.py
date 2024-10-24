@@ -76,7 +76,7 @@ def main():
 
         
         st.plotly_chart(fig, use_container_width=True)
-        st.write('Fonte: Elaboração própria.')
+        st.write('Fonte: DATASUS e IBGE.')
     
     with col2:
         with st.expander('Comparação Brasil vs Paraíba', False):
@@ -128,7 +128,7 @@ def main():
         ))
         
         st.plotly_chart(fig)
-        st.write('Fonte: Elaboração própria.')
+        st.write('Fonte: DATASUS e IBGE.')
     
 if __name__ == '__main__':
     main()

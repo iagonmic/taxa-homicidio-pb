@@ -36,7 +36,9 @@ def main():
             '''
         )
 
-        st.download_button('Baixar PDF', data='', file_name='Projeto Taxa Hom PB', type='primary')
+        with open('presentation.pdf', 'rb') as f:
+            pdf_data = f.read()
+        st.download_button(label='Baixar PDF', data='pdf_data.pdf', file_name='projeto_taxa_hom_pb.pdf', mime='application/pdf',type='primary')
 
 
 if __name__ == '__main__':

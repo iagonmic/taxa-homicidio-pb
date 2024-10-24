@@ -54,7 +54,7 @@ def main():
             
             Após isso, role a tela para baixo para ir visualizando os gráficos.
 
-            Fonte dos gráficos: Elaboração própria.
+            Fonte dos gráficos: DATASUS e IBGE.
             '''
         )
 

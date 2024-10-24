@@ -169,7 +169,7 @@ def plot_choropleth(df, geojson, locations, color, featureidkey, hover_data, hov
 
     fig.add_annotation(
         showarrow=False,
-        text='Os municípios que tem taxa igual a 0 não possuem dados disponíveis no período. Fonte: Elaboração própria.',
+        text='Os municípios que tem taxa igual a 0 não possuem dados disponíveis no período. Fonte: DATASUS e IBGE.',
         font=dict(size=12), 
         x=0.5,
         y=-0.1
