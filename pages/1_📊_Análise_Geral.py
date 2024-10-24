@@ -46,13 +46,15 @@ def main():
 
     pop_graph(paths=paths, keys=keys)
 
-    with st.expander('Informações de uso'):
+    with st.expander('Informações de uso', expanded=True):
         st.write(
             '''
-            Para visualizar os gráficos, primeiro selecione o fator social que você quer na barra lateral à esquerda 👈,
+            Para visualizar os gráficos, primeiro selecione o fator social que você quer visualizar na barra lateral à esquerda 👈,
             depois selecione o tipo de gráfico que você quer visualizar.
             
             Após isso, role a tela para baixo para ir visualizando os gráficos.
+
+            Fonte dos gráficos: Elaboração própria.
             '''
         )
 
@@ -111,8 +113,6 @@ def pop_graph(paths:dict, keys:dict):
 
 def create_graph_keys_dict():
     temp_list = st.session_state['keys_order']
-
-    print(st.session_state)
 
     graph_keys = {}
 
