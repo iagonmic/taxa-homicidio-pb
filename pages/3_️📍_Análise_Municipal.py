@@ -4,12 +4,12 @@ import plotly.express as px
 import json
 
 def main():
-    st.set_page_config(page_title='Análise Municipal', page_icon='🏠', layout='wide')
+    st.set_page_config(page_title='Análise Municipal', page_icon='📍', layout='wide')
 
     with st.sidebar:
-        option = st.selectbox('Modo de visualização', options=['Colunas', 'Intervalo'], index=0)
+        option = st.selectbox('Modo de visualização:', options=['Colunas', 'Intervalo'], index=0)
 
-        head_amount = st.number_input('Quantidade de linhas na tabela:', min_value=0, max_value=30, value=5)
+        head_amount = st.number_input('Quantidade de linhas na tabela:', min_value=0, value=5)
 
         fill_button = st.checkbox('Visualizar municípios com dados indisponíveis', value=True)
 
