@@ -41,15 +41,18 @@ def main():
         col11, col12, col13 = st.columns(3)
         with col11:
             min_hom = df_anos['TAXA'].min()
-            st.metric(label="Taxa minima", value=min_hom)
+            with st.container(border=True):
+                st.metric(label="Taxa minima", value=min_hom)
         
         with col12:
             max_hom = df_anos['TAXA'].max()
-            st.metric(label="Taxa máxima", value=max_hom)
+            with st.container(border=True):
+                st.metric(label="Taxa máxima", value=max_hom)
         
         with col13:
             media_hom = df_anos['TAXA'].mean()
-            st.metric(label="Média das taxas", value=f"{media_hom:.3f}")
+            with st.container(border=True):
+                st.metric(label="Média das taxas", value=f"{media_hom:.3f}")
         
         fig = px.line(df_anos, x="ANO", y="TAXA", title="Taxa de Homicídio ao longo dos anos")
         
@@ -95,11 +98,13 @@ def main():
         with col21:
             taxabr = df_br.query(f'período == {option}')
             taxabr = taxabr['valor'].iloc[0]
-            st.metric(label=f'Taxa homicídio Brasil no ano {option}', value=taxabr)
+            with st.container(border=True):
+                st.metric(label=f'Taxa homicídio Brasil no ano {option}', value=taxabr)
         with col22:
             taxapb = df.query(f'ANO == {option}')
             taxapb = taxapb['TAXA'].iloc[0]
-            st.metric(label=f'Taxa homicídio Paraíba no ano {option}', value=round(taxapb, 1))
+            with st.container(border=True):
+                st.metric(label=f'Taxa homicídio Paraíba no ano {option}', value=round(taxapb, 1))
         
         escala_min = 0
         escala_max = taxabr*2
@@ -124,5 +129,6 @@ def main():
         
         st.plotly_chart(fig)
         st.write('Fonte: Elaboração própria.')
+    
 if __name__ == '__main__':
     main()
