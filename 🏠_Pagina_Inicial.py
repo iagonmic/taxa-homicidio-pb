@@ -3,7 +3,7 @@ import streamlit as st
 def main():
     st.set_page_config(page_title="Taxa de Homicídio na Paraíba", page_icon=":knife:")
 
-    st.title(':knife: Taxa de Homicídio na Paraíba :flag-br:')
+    st.title(':knife: Taxa de Homicídio na Paraíba 🇧🇷')
 
     with st.container(border=True):
         st.markdown(
@@ -26,6 +26,17 @@ def main():
                         
             '''
         )
+    
+    with st.expander('Clique aqui para entender mais sobre a elaboração do projeto', icon='🔖'):
+        st.markdown(
+            '''
+
+            Faça download da apresentação do projeto, contendo a justificativa e contexto da elaboração deste aplicativo, clicando no botão abaixo 👇
+                        
+            '''
+        )
+
+        st.download_button('Baixar PDF', data='', file_name='Projeto Taxa Hom PB', type='primary')
 
 
 if __name__ == '__main__':
