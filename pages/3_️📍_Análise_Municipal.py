@@ -17,6 +17,7 @@ def main():
 
     df = df_transformed(path='csv_visualizacao/mun_taxa_homicidios.csv', fill=fill_button)
     
+    st.warning('Para cidades com baixa população, os cálculos apresentados podem apresentar discrepâncias devido ao cálculo da taxa de homicídio ser feita para cada 100mil habitantes. Recomendamos que os resultados sejam interpretados com cautela, levando em conta possíveis variações e incertezas.',icon='🚨')
     if option == 'Colunas':
         
         col1, col2 = st.columns(2, gap='large')
